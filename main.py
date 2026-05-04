@@ -187,8 +187,9 @@ class TrainingPlanner:
         self.start_date_entry.delete(0, tk.END)
         self.end_date_entry.delete(0, tk.END)
         self.refresh_table()
+
     def save_data(self):
-       # "Сохранение данных в JSON-файл"
+        """Сохранение данных в JSON-файл"""
         try:
             with open("trainings.json", "w", encoding="utf-8") as f:
                 json.dump(self.trainings, f, ensure_ascii=False, indent=4)
